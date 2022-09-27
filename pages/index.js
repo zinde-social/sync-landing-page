@@ -4,60 +4,72 @@ export default function Home() {
   return (
     <div className="container">
       <Head>
-        <title>Create Next App</title>
+        <title>Start Sync on Crossbell</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main>
+      <section>
         <h1 className="title">
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
+          What is <span className='highlight'>Sync</span>
         </h1>
 
         <p className="description">
-          Get started by editing <code>pages/index.js</code>
+          Sync your social media data on Crossbell
         </p>
 
         <div className="grid">
-          <a href="https://nextjs.org/docs" className="card">
-            <h3>Documentation &rarr;</h3>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
-
-          <a href="https://nextjs.org/learn" className="card">
-            <h3>Learn &rarr;</h3>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
-
-          <a
-            href="https://github.com/vercel/next.js/tree/master/examples"
-            className="card"
-          >
-            <h3>Examples &rarr;</h3>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
-
-          <a
-            href="https://vercel.com/import?filter=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className="card"
-          >
-            <h3>Deploy &rarr;</h3>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
+          <img className="img1" src='./what-is-sync.png' />
         </div>
-      </main>
+      </section>
+      <section>
+        <h1 className="title">
+          Sync to  <span className='highlight'>Own</span>
+        </h1>
 
-      <footer>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <img src="/vercel.svg" alt="Vercel" className="logo" />
-        </a>
-      </footer>
+        <p className="description">
+          Go from a user to an owner
+        </p>
+
+        <div className="grid">
+          <div className='card'>
+            <h3>
+              Permanent Record
+            </h3>
+            <p><span className='italic'>IPFS + Blockchain</span> </p>
+
+            <p>Get rid of maintaining numerous copies. Sync once, record permanently on-chain, content duplicated worldwide.
+            </p>
+          </div>
+          <div className='card'>
+            <h3>
+              Monetization
+            </h3>
+            <p><span className='italic'>Built-in NFT and Royalty</span> </p>
+
+            <p>
+              First time to authentically own your created content. Monetization has never been easier than now.
+            </p>
+          </div>
+          <div className='card'>
+            <h3>
+              Authorship
+            </h3>
+            <p><span className='italic'>Unalterable Proof</span> </p>
+            <p>
+              The immutability property of the blockchain suggests the authorship determination is less controversial.
+            </p>
+          </div>
+        </div>
+      </section>
+      <section>
+        <h1 className="title">
+          How Sync <span className='highlight'>Works</span>
+        </h1>
+        <div className="grid">
+          <img className="img2" src='./how-sync-works.jpeg' />
+        </div>
+      </section>
+      <h1 className="button"><a href='https://crossbell.io/sync'>Sync Now</a></h1>
 
       <style jsx>{`
         .container {
@@ -69,30 +81,11 @@ export default function Home() {
           align-items: center;
         }
 
-        main {
+        section {
           padding: 5rem 0;
           flex: 1;
           display: flex;
           flex-direction: column;
-          justify-content: center;
-          align-items: center;
-        }
-
-        footer {
-          width: 100%;
-          height: 100px;
-          border-top: 1px solid #eaeaea;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-        }
-
-        footer img {
-          margin-left: 0.5rem;
-        }
-
-        footer a {
-          display: flex;
           justify-content: center;
           align-items: center;
         }
@@ -102,21 +95,20 @@ export default function Home() {
           text-decoration: none;
         }
 
-        .title a {
-          color: #0070f3;
-          text-decoration: none;
+        .italic {
+          font-style: italic;
         }
 
-        .title a:hover,
-        .title a:focus,
-        .title a:active {
-          text-decoration: underline;
+        .title .highlight {
+          color: #ffcf55;
+          text-decoration: none;
         }
 
         .title {
           margin: 0;
           line-height: 1.15;
           font-size: 4rem;
+          color: #2768e3;
         }
 
         .title,
@@ -127,30 +119,32 @@ export default function Home() {
         .description {
           line-height: 1.5;
           font-size: 1.5rem;
+          color: #082135;
         }
 
-        code {
-          background: #fafafa;
-          border-radius: 5px;
-          padding: 0.75rem;
-          font-size: 1.1rem;
-          font-family: Menlo, Monaco, Lucida Console, Liberation Mono,
-            DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace;
+        .img1 {
+          width: 100%;
+          margin: -150px;
+        }
+
+        .img2 {
+          max-width: 800px;
+          width: 100%;
         }
 
         .grid {
           display: flex;
+          overflow-x: clip;
           align-items: center;
           justify-content: center;
           flex-wrap: wrap;
-
-          max-width: 800px;
+          max-width: 1200px;
           margin-top: 3rem;
         }
 
         .card {
           margin: 1rem;
-          flex-basis: 45%;
+          flex-basis: 30%;
           padding: 1.5rem;
           text-align: left;
           color: inherit;
@@ -160,32 +154,41 @@ export default function Home() {
           transition: color 0.15s ease, border-color 0.15s ease;
         }
 
-        .card:hover,
-        .card:focus,
-        .card:active {
-          color: #0070f3;
-          border-color: #0070f3;
-        }
-
         .card h3 {
           margin: 0 0 1rem 0;
           font-size: 1.5rem;
         }
 
         .card p {
-          margin: 0;
+          margin: 0.45rem 0;
           font-size: 1.25rem;
           line-height: 1.5;
         }
 
-        .logo {
-          height: 1em;
+        .button {
+          padding: 1rem 3rem;
+          border-radius: 4rem;
+          line-height: 1.15;
+          font-size: 4rem;
+          background-color: #5b89f7;
+          color: #fff;
         }
 
         @media (max-width: 600px) {
           .grid {
             width: 100%;
             flex-direction: column;
+          }
+          section {
+            width: 100%;
+          }
+          .button {
+            padding: 1rem 1.5rem;
+          }
+          .img1 {
+            width: 120%;
+            margin: -100px;
+            overflow: hidden;
           }
         }
       `}</style>
