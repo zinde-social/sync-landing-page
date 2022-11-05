@@ -87,7 +87,7 @@ export default function Home() {
         <div className="grid">
           <img className="img2" src='./how-sync-works.jpeg' />
         </div>
-        <div className='power-footer'>
+        <div className='hide power-footer'>
           <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 235.3 235.3" className="w-2 h-2 ">
             <path d="M30.3 164l84 48.5 84-48.5V67l-84-48.5-84 48.5v97z" fill="#469ea2"></path>
             <path d="M105.7 30.1l-61 35.2a18.19 18.19 0 010 3.3l60.9 35.2a14.55 14.55 0 0117.3 0l60.9-35.2a18.19 18.19 0 010-3.3L123 30.1a14.55 14.55 0 01-17.3 0zm84 48.2l-61 35.6a14.73 14.73 0 01-8.6 15l.1 70a15.57 15.57 0 012.8 1.6l60.9-35.2a14.73 14.73 0 018.6-15V79.9a20 20 0 01-2.8-1.6zm-150.8.4a15.57 15.57 0 01-2.8 1.6v70.4a14.38 14.38 0 018.6 15l60.9 35.2a15.57 15.57 0 012.8-1.6v-70.4a14.38 14.38 0 01-8.6-15L38.9 78.7z" fill="#6acad1"></path>
@@ -140,6 +140,10 @@ export default function Home() {
           flex-direction: column;
           justify-content: center;
           align-items: center;
+        }
+
+        .hide {
+          display: none! important;
         }
 
         .power-footer {
