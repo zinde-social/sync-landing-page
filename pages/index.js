@@ -85,7 +85,7 @@ export default function Home() {
           How Sync <span className='highlight'>Works</span>
         </h1>
         <div className="grid">
-          <img className="img2" src='./how-sync-works.jpeg' />
+          <img className="img2" src='./how-sync-works.png' />
         </div>
         <div className='hide power-footer'>
           <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 235.3 235.3" className="w-2 h-2 ">
@@ -216,7 +216,7 @@ export default function Home() {
         }
 
         .img2 {
-          max-width: 800px;
+          max-width: 1000px;
           width: 100%;
         }
 
